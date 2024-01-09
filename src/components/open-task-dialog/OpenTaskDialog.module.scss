@@ -32,3 +32,11 @@
   font-weight: 400;
   color: $lightGray;
 }
+
+@media (max-width: 530px) {
+  .dialog {
+    width: 100vw;
+    height: 100vh;
+    border-radius: unset;
+  }
+}

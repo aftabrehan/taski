@@ -18,3 +18,11 @@
     border-color: $primaryBlue;
   }
 }
+
+@media (max-width: 530px) {
+  .dialog {
+    width: 100vw;
+    height: 100vh;
+    border-radius: unset;
+  }
+}
