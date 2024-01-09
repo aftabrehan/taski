@@ -34,6 +34,7 @@ const AddTask = ({ id }) => {
 
     setIsDialogOpen(false)
     setVal('')
+    console.log('Tasks:', tasks)
   }
 
   return (
