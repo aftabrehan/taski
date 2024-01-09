@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import Header from 'components/header'
 import TaskList from 'components/tasklist'
 import AddTask from 'components/add-task'

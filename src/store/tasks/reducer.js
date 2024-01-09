@@ -11,7 +11,12 @@ import { generateRandomString } from 'lib'
 const initialState = []
 
 const taskReducer = (state = initialState, action) => {
-  let newTask, parentTaskId, parentTask, newSubtask
+  let newTask,
+    parentTaskId,
+    parentTask,
+    newSubtask,
+    taskIdToToggle,
+    taskIdToDelete
 
   switch (action.type) {
     case ADD_TASK:
@@ -40,11 +45,11 @@ const taskReducer = (state = initialState, action) => {
       return state
 
     case TOGGLE_COMPLETE:
-      const taskIdToToggle = action.payload
+      taskIdToToggle = action.payload
       return updateTaskCompletion(state, taskIdToToggle)
 
     case DELETE_TASK:
-      const taskIdToDelete = action.payload
+      taskIdToDelete = action.payload
       return deleteTaskById(state, taskIdToDelete)
 
     default:
