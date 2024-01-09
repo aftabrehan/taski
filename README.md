@@ -1,6 +1,7 @@
 # Taski Web App
 Built using React and Redux.
 
+### [Live Preview](https://taski-navy.vercel.app)
 
 ### Getting Started
 
