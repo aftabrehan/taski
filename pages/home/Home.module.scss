@@ -1,17 +1,40 @@
 @import 'styles/common';
 
 .wrapper {
+  max-width: 1100px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  padding: 1rem 4rem;
-  gap: 1rem;
+  padding: 2rem;
+  margin: 74px auto 0;
+  gap: 2rem;
+  position: relative;
 }
 
-.link {
-  &:hover {
+.heading {
+  @extend .spaceBetween;
+  width: 100%;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: $slatePurple;
+
+  span {
     color: $primaryBlue;
-    text-decoration: underline;
+  }
+}
+
+.logBtn {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+}
+
+@media (max-width: 648px) {
+  .wrapper {
+    padding: 1rem;
   }
 }

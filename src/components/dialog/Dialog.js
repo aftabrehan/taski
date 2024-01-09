@@ -20,7 +20,7 @@ const Dialog = ({
   blur,
   closeOnClickAway,
   customClass,
-  animation = 'bounce',
+  animation = 'blowUp',
 }) => {
   useEffect(() => {
     const handleEsc = e =>
@@ -29,9 +29,6 @@ const Dialog = ({
     document.addEventListener('keydown', handleEsc)
     return () => document.removeEventListener('keydown', handleEsc)
   }, [close, closeOnClickAway, isOpen])
-
-  console.log(isOpen)
-  console.log(close)
 
   return (
     <Modal
@@ -47,7 +44,7 @@ const Dialog = ({
           rounded && stl.rounded,
           stl[animation],
           stl[`${size}Size`],
-          customClass
+          customClass,
         )}
       >
         {children}

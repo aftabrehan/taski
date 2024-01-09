@@ -24,7 +24,7 @@ const MyApp = ({ Component, pageProps }) => {
 }
 
 MyApp.propTypes = {
-  Component: PropTypes.func,
+  Component: PropTypes.any,
   pageProps: PropTypes.object,
 }
 

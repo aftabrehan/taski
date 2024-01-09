@@ -1,0 +1,15 @@
+@import 'styles/common';
+
+.list {
+  @extend .flexColStart;
+  width: 100%;
+  gap: 1rem;
+  overflow-y: auto;
+}
+
+.text {
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: $lightGray;
+}

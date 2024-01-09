@@ -1,0 +1,33 @@
+@import 'styles/common';
+
+.dialog {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.titleBar {
+  @extend .spaceBetween;
+  gap: 1rem;
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: $slatePurple;
+  }
+}
+
+.list {
+  @extend .flexColStart;
+  width: 100%;
+  gap: 1rem;
+  overflow-y: auto;
+  max-height: 600px;
+}
+
+.text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: $lightGray;
+}

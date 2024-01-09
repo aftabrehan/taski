@@ -1,5 +1,5 @@
-import appearanceTypes from 'store/appearance/types'
+import taskReducer from 'store/tasks/types'
 
-export default {
-  ...appearanceTypes,
+export const allTypes = {
+  ...taskReducer,
 }

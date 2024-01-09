@@ -6,19 +6,18 @@ import Button from 'components/button'
 import stl from './Dialog.module.scss'
 
 const DialogFooter = ({
-  onClick = () => console.log('confirm clicked'),
+  onSubmit = () => console.log('confirm clicked'),
   label = 'Confirm',
-  size,
-  close,
   customClass,
 }) => (
-  <div className={clsx(stl.footer, stl[`${size}Footer`], customClass)}>
-    <Button onClick={close} label="Cancel" size={size} variant="error" />
-    <Button onClick={onClick} label={label} size={size} />
+  <div className={clsx(stl.footer, customClass)}>
+    <Button onClick={onSubmit} label={label} />
   </div>
 )
 
 DialogFooter.propTypes = {
+  onSubmit: PropTypes.func,
+  label: PropTypes.string,
   customClass: PropTypes.string,
 }
 

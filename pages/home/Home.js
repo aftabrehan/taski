@@ -1,21 +1,37 @@
-import Link from 'next/link'
+import { useState } from 'react'
 
+import Header from 'components/header'
+import TaskList from 'components/tasklist'
+import AddTask from 'components/add-task'
 import Button from 'components/button'
 
 import stl from './Home.module.scss'
+import { useSelector } from 'react-redux'
 
-const Home = () => (
-  <div className={stl.wrapper}>
-    <h1>{`Let's Start without wasting our precious time 🕗`}</h1>
+const Home = () => {
+  const tasks = useSelector(state => state.tasks)
 
-    <Button label="Yay!" />
+  const userName = 'John'
 
-    <Link href="/stories">
-      <a className={stl.link}>
-        You can also checkout story of the components 🚀
-      </a>
-    </Link>
-  </div>
-)
+  return (
+    <div className={stl.wrapper}>
+      <Header />
+
+      <div className={stl.heading}>
+        <h1 className={stl.title}>
+          Welcome, <span>{userName}</span>
+        </h1>
+        <AddTask />
+      </div>
+      <TaskList />
+
+      <Button
+        label="Log State"
+        customClass={stl.logBtn}
+        onClick={() => console.log('Tasks:', tasks)}
+      />
+    </div>
+  )
+}
 
 export default Home

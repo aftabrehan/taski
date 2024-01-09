@@ -10,18 +10,18 @@ import {
   REGISTER,
 } from 'redux-persist'
 
-import { appearanceReducer } from 'store/appearance'
+import taskReducer from './tasks/reducer'
 
 import { errorTypes, allTypes } from 'store/utils'
 
 const appReducer = combineReducers({
-  appearance: appearanceReducer,
+  tasks: taskReducer,
 })
 
-// const { CLEAR_STORE } = allTypes
+const { CLEAR_STORE } = allTypes
 
 const rootReducer = (state, action) => {
-  if (['CLEAR_STORE'].includes(action.type)) {
+  if ([CLEAR_STORE].includes(action.type)) {
     storage.removeItem('persist:root')
     return appReducer({}, action)
   }
@@ -32,7 +32,7 @@ const rootReducer = (state, action) => {
 const persistConfig = {
   key: 'root',
   storage: storage,
-  whitelist: ['appearance'],
+  whitelist: ['tasks'],
   blacklist: ['persist'],
 }
 

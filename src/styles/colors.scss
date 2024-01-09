@@ -1,14 +1,16 @@
 $white: #fff;
 $black: #000;
-
+$slatePurple: #3f3d56;
 $halfWhite: #f9f9f9;
 $lightGray: #666;
 $veryLightGray: #999;
+$paleWhite: #f5f7f9;
 
-$primaryBlue: #0090f3;
+$primaryBlue: #007fff;
 $linkHover: #0af;
 $lightRed: #f32400;
 $red: red;
+$fireRed: #ff5e5e;
 
 $veryPaleBlue: rgba(0, 118, 255, 0.1);
 $blueBoxShadow: rgb(0 118 255 / 39%);
@@ -17,6 +19,7 @@ $paleBlueBoxShadow: rgba(11, 65, 126, 0.15);
 $paleBlueBoxShadowHover: rgba(11, 65, 126, 0.15);
 $lightRedBoxShadow: #f3240092;
 $lightRedBoxShadowHover: #f3240080;
+$tFireRed: rgba(255, 140, 140, 0.15);
 
 // transparent colorspace
 $tWhite: rgba(255, 255, 255, 0.1);

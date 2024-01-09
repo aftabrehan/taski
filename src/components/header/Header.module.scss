@@ -1,0 +1,39 @@
+@import 'styles/common';
+
+.header {
+  @extend .spaceBetween;
+  width: 100%;
+  max-width: 1100px;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  translate: -50% 0;
+}
+
+.userInfo {
+  @extend .flexEnd;
+  align-items: center;
+  gap: 0.75rem;
+
+  span {
+    font-size: 18px;
+    font-weight: 600;
+    color: $slatePurple;
+  }
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid $primaryBlue;
+}
+
+@media (max-width: 648px) {
+  .header {
+    padding: 1rem;
+  }
+}

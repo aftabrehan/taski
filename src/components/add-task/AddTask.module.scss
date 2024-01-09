@@ -1,0 +1,20 @@
+@import 'styles/common';
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.25rem;
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid $lightGray;
+
+  &:focus {
+    border-color: $primaryBlue;
+  }
+}

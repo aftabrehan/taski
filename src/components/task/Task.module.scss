@@ -1,0 +1,45 @@
+@import 'styles/common';
+
+.task {
+  @extend .spaceBetween;
+  width: 100%;
+  gap: 2rem;
+  padding: 1.25rem;
+  border-radius: 12px;
+  background-color: $paleWhite;
+
+  &.completed label {
+    text-decoration: line-through;
+  }
+
+  label {
+    @extend .flexStart;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 18px;
+    font-weight: 600;
+    color: $slatePurple;
+  }
+}
+
+.btnWrapper {
+  @extend .flexEnd;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 648px) {
+  .task {
+    padding: 0.75rem;
+  }
+
+  .btnWrapper {
+    gap: 0.5rem;
+
+    button {
+      padding: 0.5rem;
+      font-size: 0.95rem;
+      border-radius: 6px;
+    }
+  }
+}

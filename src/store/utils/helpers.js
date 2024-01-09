@@ -1,4 +1,4 @@
-import allTypes from './allTypes'
+import { allTypes } from './allTypes'
 
 export const requestActionTypes = actionType => ({
   request: `${actionType}_REQUEST`,
