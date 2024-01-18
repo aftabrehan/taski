@@ -15,7 +15,9 @@ const AddTask = ({ id }) => {
   const [val, setVal] = useState('')
 
   const tasks = useSelector(state => state.tasks)
-  const parentTask = id ? findTaskById(tasks, id) : {}
+  const reversedTasks = [...tasks].reverse()
+
+  const parentTask = id ? findTaskById(reversedTasks, id) : {}
 
   const dispatch = useDispatch()
 
@@ -34,7 +36,7 @@ const AddTask = ({ id }) => {
 
     setIsDialogOpen(false)
     setVal('')
-    console.log('Tasks:', tasks)
+    console.log('Tasks:', reversedTasks)
   }
 
   return (

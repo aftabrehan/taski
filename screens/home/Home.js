@@ -10,6 +10,7 @@ import stl from './Home.module.scss'
 
 const Home = () => {
   const tasks = useSelector(state => state.tasks)
+  const reversedTasks = [...tasks].reverse()
 
   const userName = 'John'
 
@@ -33,7 +34,7 @@ const Home = () => {
         <Button
           label="Log State"
           customClass={stl.logBtn}
-          onClick={() => console.log('Tasks:', tasks)}
+          onClick={() => console.log('Tasks:', reversedTasks)}
         />
       </div>
     </>
