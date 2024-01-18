@@ -1,14 +1,14 @@
-# Taski Web App
+# Taskiwex Web App
 Built using React and Redux.
 
-### [Live Preview](https://taski-navy.vercel.app)
+### [Live Preview](https://taskiwex.vercel.app)
 
 ### Getting Started
 
 1. Clone the repository.
 
 ```
-git clone https://github.com/aftabrehan/taski
+git clone https://github.com/aftabrehan/taskiwex
 ```
 
 2. Install the required dependencies.
