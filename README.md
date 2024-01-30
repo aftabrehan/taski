@@ -8,7 +8,7 @@ Built using React and Redux.
 1. Clone the repository.
 
 ```
-git clone https://github.com/aftabrehan/taskiwex
+git clone https://github.com/aftabrehan/taskiwex.git
 ```
 
 2. Install the required dependencies.
