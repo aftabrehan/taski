@@ -4,7 +4,7 @@
   @extend .spaceBetween;
   width: 100%;
   gap: 2rem;
-  padding: 1.25rem;
+  padding: 0.75rem 1.25rem;
   border-radius: 12px;
   background-color: $paleWhite;
 
@@ -16,9 +16,17 @@
     @extend .flexStart;
     align-items: center;
     gap: 0.75rem;
-    font-size: 18px;
-    font-weight: 600;
-    color: $slatePurple;
+
+    span {
+      font-size: 18px;
+      font-weight: 600;
+      color: $slatePurple;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 }
 
@@ -30,7 +38,12 @@
 
 @media (max-width: 648px) {
   .task {
+    gap: 1rem;
     padding: 0.75rem;
+
+    label span {
+      width: 80%;
+    }
   }
 
   .btnWrapper {

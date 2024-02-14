@@ -27,7 +27,7 @@ const CheckBox = ({
         }}
       >
         {isChecked ? <CheckedIcon /> : <UnCheckedIcon />}
-        {label}
+        <span>{label}</span>
       </label>
       <input id={checkBoxId} type="checkbox" onChange={onChange} hidden />
     </div>

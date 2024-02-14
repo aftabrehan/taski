@@ -38,3 +38,9 @@
     padding: 1rem;
   }
 }
+
+@media (max-width: 530px) {
+  .logBtn {
+    display: none;
+  }
+}
